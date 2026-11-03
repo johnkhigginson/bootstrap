@@ -54,8 +54,25 @@
     padding-left: $form-floating-padding-x;
   }
 
+  // Date and time inputs do not support `:placeholder-shown`, so always use the
+  // floated padding here. The sibling label is always floated too (see below).
+  // See https://github.com/twbs/bootstrap/issues/39257.
+  > .form-control[type="date"],
+  > .form-control[type="month"],
+  > .form-control[type="week"],
+  > .form-control[type="time"],
+  > .form-control[type="datetime-local"] {
+    padding-top: $form-floating-input-padding-t;
+    padding-bottom: $form-floating-input-padding-b;
+  }
+
   > .form-control:focus,
   > .form-control:not(:placeholder-shown),
+  > .form-control[type="date"],
+  > .form-control[type="month"],
+  > .form-control[type="week"],
+  > .form-control[type="time"],
+  > .form-control[type="datetime-local"],
   > .form-control-plaintext,
   > .form-select {
     ~ label {

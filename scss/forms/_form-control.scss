@@ -71,6 +71,11 @@
     padding: 0;
   }
 
+  // Soften the `/` and `:` separators in date and time inputs (WebKit/Blink only)
+  &::-webkit-datetime-edit-text {
+    color: $input-placeholder-color;
+  }
+
   // Placeholder
   &::placeholder {
     color: $input-placeholder-color;

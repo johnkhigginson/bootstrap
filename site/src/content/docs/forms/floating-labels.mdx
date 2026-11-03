@@ -65,6 +65,19 @@ Other than `.form-control`, floating labels are only available on `.form-select`
     <label for="floatingSelect">Works with selects</label>
   </div>`} />
 
+## Date and time
+
+Date, time, datetime-local, month, and week inputs always show the `<label>` in its floated state. These inputs do not support placeholders like textual inputs do. So a `placeholder` attribute is not required.
+
+<Example code={`<div class="form-floating mb-3">
+    <input type="date" class="form-control" id="floatingDate">
+    <label for="floatingDate">Date</label>
+  </div>
+  <div class="form-floating">
+    <input type="time" class="form-control" id="floatingTime">
+    <label for="floatingTime">Time</label>
+  </div>`} />
+
 ## Disabled
 
 Add the `disabled` boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
